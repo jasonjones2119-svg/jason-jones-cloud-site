@@ -3,36 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Jason Jones | Cloud & AI Engineering</title>
+  <meta 
+    name="description" 
+    content="Jason Jones — Cloud and Network Engineering student, Army veteran, and aspiring cloud engineer building projects in AWS, Linux, Python, and automation." 
+  />
+
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RH68M77H8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-8RH68M77H8');
   </script>
 </head>
+
 <body>
 
   <!-- HERO -->
   <section id="hero">
     <h1>Jason Jones</h1>
-    <p class="tagline">Cloud & Network Engineering Student &nbsp;|&nbsp; Army Veteran</p>
 
-    <!-- VIDEO PLACEHOLDER — swap src for your HeyGen video file later -->
+    <p class="tagline">
+      Cloud & Network Engineering Student <span>|</span> Army Veteran
+    </p>
+
+    <!-- VIDEO -->
     <div class="video-wrapper">
-      <p class="video-placeholder">🎬 HeyGen intro video — coming soon</p>
+      <video controls playsinline preload="metadata">
+        <source src="./intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <!-- BUTTONS --> 
+    <!-- BUTTONS -->
     <div class="buttons">
-      <a href="Jason_Jones_AWS_Resume.pdf" target="_blank">Resume</a>
-      <a href="https://github.com/jasonjones2119-svg" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jason-jones-9615483a7/" target="_blank">LinkedIn</a>
+      <a href="./Jason_Jones_AWS_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        Resume
+      </a>
+
+      <a href="https://github.com/jasonjones2119-svg" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/jason-jones-9615483a7/" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
     </div>
+  </section>
 
   <!-- STATEMENT -->
   <section id="statement">
@@ -49,41 +75,52 @@
 
     <div class="roadmap-grid">
 
-      <div class="roadmap-card active">
+      <article class="roadmap-card active">
         <span class="badge now">Now</span>
         <h3>WGU — Cloud & Network Engineering</h3>
         <p>AWS Path — Currently in progress</p>
-      </div>
+      </article>
 
-      <div class="roadmap-card active">
+      <article class="roadmap-card active">
         <span class="badge next">Next</span>
         <h3>Certifications</h3>
-        <p>CompTIA A+ · Network+ · Security+<br/>AWS Cloud Practitioner · Azure AI-900</p>
-      </div>
+        <p>
+          CompTIA A+ · Network+ · Security+<br />
+          AWS Cloud Practitioner · Azure AI-900
+        </p>
+      </article>
 
-      <div class="roadmap-card">
+      <article class="roadmap-card">
         <span class="badge goal">Goal</span>
         <h3>BS — AWS Cloud Engineering</h3>
-        <p>Deep specialization in Amazon Web Services infrastructure and architecture</p>
-      </div>
+        <p>
+          Deep specialization in Amazon Web Services infrastructure and architecture.
+        </p>
+      </article>
 
-      <div class="roadmap-card">
+      <article class="roadmap-card">
         <span class="badge goal">Goal</span>
         <h3>BS — Azure Cloud Engineering</h3>
-        <p>Microsoft Azure cloud platform, hybrid infrastructure, and enterprise solutions</p>
-      </div>
+        <p>
+          Microsoft Azure cloud platform, hybrid infrastructure, and enterprise solutions.
+        </p>
+      </article>
 
-      <div class="roadmap-card">
+      <article class="roadmap-card">
         <span class="badge future">Future</span>
         <h3>MS — AI Engineering</h3>
-        <p>Applied machine learning, model deployment, and intelligent systems</p>
-      </div>
+        <p>
+          Applied machine learning, model deployment, and intelligent systems.
+        </p>
+      </article>
 
-      <div class="roadmap-card">
+      <article class="roadmap-card">
         <span class="badge future">Future</span>
         <h3>PhD — AI Engineering & Machine Learning</h3>
-        <p>Research-level expertise in artificial intelligence and machine learning systems</p>
-      </div>
+        <p>
+          Research-level expertise in artificial intelligence and machine learning systems.
+        </p>
+      </article>
 
     </div>
   </section>
