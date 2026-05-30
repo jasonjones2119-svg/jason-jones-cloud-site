@@ -68,6 +68,7 @@ h1 {
 }
 
 .tagline {
+  max-width: 900px;
   margin-top: 10px;
   font-size: 1rem;
   color: #c0c0d0;
@@ -114,7 +115,8 @@ h1 {
   margin-top: 32px;
 }
 
-.buttons a {
+.buttons a,
+.project-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,13 +136,16 @@ h1 {
 }
 
 .buttons a:hover,
-.buttons a:focus {
+.buttons a:focus,
+.project-links a:hover,
+.project-links a:focus {
   background-color: rgba(0, 255, 65, 0.15);
   box-shadow: 0 0 18px rgba(0, 255, 65, 0.25);
   transform: translateY(-2px);
 }
 
-.buttons a:focus {
+.buttons a:focus,
+.project-links a:focus {
   outline: 2px solid rgba(0, 255, 65, 0.7);
   outline-offset: 3px;
 }
@@ -151,7 +156,7 @@ h1 {
 ───────────────────────────── */
 
 #statement {
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 55px 20px;
   text-align: center;
@@ -166,13 +171,16 @@ h1 {
 
 
 /* ─────────────────────────────
-   ROADMAP
+   SHARED SECTIONS
 ───────────────────────────── */
 
-#roadmap {
-  max-width: 900px;
+#projects,
+#deployment,
+#roadmap,
+#connect {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 20px 80px;
+  padding: 60px 20px;
 }
 
 h2 {
@@ -184,6 +192,118 @@ h2 {
   text-transform: uppercase;
 }
 
+
+/* ─────────────────────────────
+   PROJECTS
+───────────────────────────── */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 20px;
+}
+
+.project-card,
+.deployment-card,
+.roadmap-card {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
+}
+
+.project-card {
+  padding: 24px;
+}
+
+.project-card.featured {
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+.project-card h3 {
+  margin: 12px 0 10px;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.project-card p {
+  color: #a0a0ba;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.project-card ul {
+  margin: 16px 0 0 18px;
+  color: #8d8da8;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.project-links a {
+  min-width: auto;
+  padding: 9px 18px;
+  font-size: 0.86rem;
+}
+
+
+/* ─────────────────────────────
+   DEPLOYMENT
+───────────────────────────── */
+
+#deployment {
+  padding-top: 30px;
+}
+
+.deployment-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px;
+  text-align: center;
+}
+
+.deployment-card p {
+  color: #a0a0ba;
+  line-height: 1.8;
+}
+
+.deployment-flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.deployment-flow span {
+  padding: 10px 14px;
+  color: #ffffff;
+  background-color: rgba(0, 255, 65, 0.07);
+  border: 1px solid rgba(0, 255, 65, 0.28);
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.deployment-note {
+  font-size: 0.95rem;
+}
+
+
+/* ─────────────────────────────
+   ROADMAP
+───────────────────────────── */
+
+#roadmap {
+  padding-bottom: 80px;
+}
+
 .roadmap-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -193,10 +313,6 @@ h2 {
 .roadmap-card {
   min-height: 165px;
   padding: 22px;
-  background-color: #1a1a2e;
-  border: 1px solid #2a2a4a;
-  border-radius: 10px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
 }
 
 .roadmap-card.active {
@@ -214,6 +330,27 @@ h2 {
   color: #8d8da8;
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+
+/* ─────────────────────────────
+   CONNECT
+───────────────────────────── */
+
+#connect {
+  max-width: 760px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+#connect p {
+  color: #a0a0ba;
+  line-height: 1.8;
+}
+
+.connect-buttons {
+  margin-top: 28px;
 }
 
 
@@ -272,7 +409,7 @@ h2 {
   }
 
   .tagline {
-    max-width: 320px;
+    max-width: 340px;
     font-size: 0.95rem;
   }
 
@@ -296,11 +433,32 @@ h2 {
     font-size: 1rem;
   }
 
-  #roadmap {
-    padding: 48px 18px 64px;
+  #projects,
+  #deployment,
+  #roadmap,
+  #connect {
+    padding: 48px 18px;
   }
 
+  .project-grid,
   .roadmap-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links a {
+    width: 100%;
+  }
+
+  .deployment-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deployment-flow span {
+    width: min(100%, 260px);
   }
 }
